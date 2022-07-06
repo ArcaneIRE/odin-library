@@ -50,3 +50,10 @@ modalAdd.addEventListener('click', () => {
     modal.classList.remove('visible');
     document.querySelector('#modal-form').reset();
 });
+
+// Default Book
+addBookToLibrary('Working Backwards', 'Bill Carr, Colin Bryar', true);
+addBookToLibrary('Atomic Habits', 'James Clear', false);
+addBookToLibrary('Mistborn: The Final Empire', 'Brandon Sanderson', true);
+addBookToLibrary('Mistborn: The Well of Ascension', 'Brandon Sanderson', true);
+renderLibrary();
