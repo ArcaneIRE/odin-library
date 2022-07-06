@@ -15,11 +15,17 @@ header h1 {
     margin: 0;
 }
 
-#add-book {
+#buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+#add-book, #clear-books {
     width: 8rem;
     height: 3rem;
     font-size: 1.2rem;
-    margin: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 #add-book-modal {

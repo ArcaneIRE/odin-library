@@ -51,6 +51,13 @@ modalAdd.addEventListener('click', () => {
     document.querySelector('#modal-form').reset();
 });
 
+// Clear Button
+const clear = document.querySelector('#clear-books');
+clear.addEventListener('click', () => {
+    library = []
+    renderLibrary();
+})
+
 // Default Book
 addBookToLibrary('Working Backwards', 'Bill Carr, Colin Bryar', true);
 addBookToLibrary('Atomic Habits', 'James Clear', false);
