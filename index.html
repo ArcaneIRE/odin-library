@@ -13,6 +13,26 @@
     <header>
         <h1>📚 Library</h1>
     </header>
+    <button id="add-book" type="button">Add Book</button>
+    <div id="add-book-modal">
+        <div id="modal-content">
+            <div id="modal-header">
+                <h2>Add a Book</h2>
+                <span id="modal-close">✖</span>
+            </div>
+            <form id="modal-form">
+                <label for="title">Title:</label>
+                <input type="text" id="modal-form-title">
+                <label for="author" >Author(s):</label>
+                <input type="text" id="modal-form-author">
+                <span class="modal-form-pair flex-row">
+                    <label for="read">Read:</label>
+                    <input type="checkbox" id="modal-form-read">
+                </span>
+                <button type="button" id="modal-add">Add</button>
+            </form>
+        </div>
+    </div>
     <div id="book-list">
 
     </div>

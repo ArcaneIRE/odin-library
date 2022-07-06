@@ -26,3 +26,27 @@ function renderLibrary () {
             </div>`;
     });
 }
+
+// Modal
+const addBook = document.querySelector('#add-book');
+const modal = document.querySelector('#add-book-modal');
+const modalClose = document.querySelector('#modal-close');
+const modalContent = document.querySelector('#modal-content')
+
+addBook.addEventListener('click', () => modal.classList.add('visible'));
+
+modal.addEventListener('click', () => modal.classList.remove('visible'));
+modalClose.addEventListener('click', () => modal.classList.remove('visible'));
+
+modalContent.addEventListener('click', (e) => e.stopPropagation());
+
+const modalAdd = document.querySelector('#modal-add');
+modalAdd.addEventListener('click', () => {
+    let title = document.querySelector('#modal-form-title').value;
+    let author = document.querySelector('#modal-form-author').value;
+    let isRead = document.querySelector('#modal-form-read').checked;
+    addBookToLibrary(title, author, isRead);
+    renderLibrary();
+    modal.classList.remove('visible');
+    document.querySelector('#modal-form').reset();
+});
