@@ -18,7 +18,7 @@ function renderLibrary () {
         bookList.innerHTML +=
             `<div class="book" data-index="${index}">
                 <h3 class="title">${book.title}</h3>
-                <p class="author">${book.author}</p>
+                <p class="author">By: ${book.author}</p>
                 <label>
                     <input type="checkbox" ${book.isRead ? ' checked' : ''}>
                     Read
