@@ -4,6 +4,7 @@ body {
     align-items: center;
     box-sizing: border-box;
     margin: 0 auto;
+    padding-top: 1.5rem;
     width: min(90vw, 1200px);
     background-color: #EEE;
     color: #444;
