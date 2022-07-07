@@ -54,8 +54,10 @@ modalAdd.addEventListener('click', () => {
 // Clear Button
 const clear = document.querySelector('#clear-books');
 clear.addEventListener('click', () => {
-    library = []
-    renderLibrary();
+    if (confirm('Are you sure you want to clear?')) {
+        library = []
+        renderLibrary();
+    }
 })
 
 // Default Book
