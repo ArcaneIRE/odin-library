@@ -114,13 +114,20 @@ header h1 {
 
 .book {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 1rem;
-    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
     padding: 1.5rem;
     border-radius: 0.5rem;
     background-color: rgb(223, 223, 223);
+}
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
 }
 
 .book h3 {
@@ -133,4 +140,16 @@ header h1 {
 
 .book p {
     margin: 0;
+}
+
+.book-remove {
+    font-size: 1.2rem;
+}
+
+.book-remove:hover,
+.book-remove:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
 }
