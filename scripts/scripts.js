@@ -16,22 +16,27 @@ function renderLibrary () {
     bookList.innerHTML = '';
     library.forEach((book, index) => {
         bookList.innerHTML +=
-            `<div class="book">
+            `<div class="book" data-index="${index}">
                 <div class="book-content">
                     <h3 class="title">${book.title}</h3>
                     <p class="author">By: ${book.author}</p>
                     <label>
-                        <input type="checkbox" ${book.isRead ? ' checked' : ''}>
+                        <input class="is-read" type="checkbox" ${book.isRead ? ' checked' : ''}>
                         Read
                     </label>
                 </div>
-                <span class="book-remove" data-index="${index}">✖</span>
+                <span class="book-remove">✖</span>
             </div>`;
     });
     Array.from(bookList.querySelectorAll('.book-remove')).forEach((removeButton) => {
         removeButton.addEventListener('click', () => {
-            library.splice(removeButton.dataset.index, 1); 
+            library.splice(removeButton.closest('[data-index]').dataset.index, 1); 
             renderLibrary();
+        });
+    });
+    Array.from(bookList.querySelectorAll('.is-read')).forEach((isReadBox) => {
+        isReadBox.addEventListener('click', () => {
+            library[isReadBox.closest('[data-index]').dataset.index].isRead = isReadBox.checked;
         });
     });
 }
