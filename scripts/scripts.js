@@ -74,7 +74,7 @@ clear.addEventListener('click', () => {
     }
 })
 
-// Default Book
+// Default Books
 addBookToLibrary('Working Backwards', 'Bill Carr, Colin Bryar', true);
 addBookToLibrary('Atomic Habits', 'James Clear', false);
 addBookToLibrary('Mistborn: The Final Empire', 'Brandon Sanderson', true);
